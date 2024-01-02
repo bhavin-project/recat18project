@@ -1,17 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const BookList = () => {
+  return (
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+};
+const author = "S. Jaishankar";
+const title = "Why Bharat Matters";
+const imgsrc =
+  "https://images-eu.ssl-images-amazon.com/images/I/71Hqj4xb0XL._AC_UL600_SR600,400_.jpg";
+const alt = "Why Bharat Matters";
+const Book = () => {
+  return (
+    <article className="book">
+      <img src={imgsrc} alt={alt} />
+      <h2
+        style={{
+          color: "#6185b8",
+          fontSize: "0.85rem",
+          marginBottom: "0.2rem",
+        }}
+      >
+        {title}
+      </h2>
+      <h4 style={{ color: "#e0bf63", fontSize: "0.5rem", marginTop: "0.3rem" }}>
+        {author}
+      </h4>
+    </article>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<BookList />);
