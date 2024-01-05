@@ -46,6 +46,29 @@ const Book = (props) => {
   );
 };
 
+const EventTesting = () => {
+  const handleEvent = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    console.log("Target Name", e.target.name);
+    console.log("Target Value", e.target.value);
+  };
+  return (
+    <section>
+      <form>
+        <h2>Typical Form</h2>
+        <input
+          type="text"
+          name="txtOne"
+          id="txtOne"
+          onChange={handleEvent}
+        ></input>
+        <button onClick={handleEvent}>Click me</button>
+      </form>
+    </section>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<BookList />);
+root.render(<EventTesting />);
