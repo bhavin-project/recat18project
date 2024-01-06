@@ -11,20 +11,23 @@ const BookList = () => {
     console.log(book);
   };
   return (
-    <section className="booklist">
-      {books.map((book) => {
-        return (
-          <Book
-            imgsrc={book.imgsrc}
-            alt={book.alt}
-            title={book.title}
-            author={book.author}
-            keyvalue={book.id}
-            bookfun={getBook}
-          />
-        );
-      })}
-    </section>
+    <>
+      <h1>Best Seller</h1>
+      <section className="booklist">
+        {books.map((book) => {
+          return (
+            <Book
+              imgsrc={book.imgsrc}
+              alt={book.alt}
+              title={book.title}
+              author={book.author}
+              keyvalue={book.id}
+              bookfun={getBook}
+            />
+          );
+        })}
+      </section>
+    </>
   );
 };
 
