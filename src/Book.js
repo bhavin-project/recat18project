@@ -14,14 +14,8 @@ export const Book = (props) => {
       <h4 style={{ color: "#e0bf63", fontSize: "0.8rem", marginTop: "0.3rem" }}>
         {props.author}
       </h4>
-      <button
-        type="button"
-        name="clickBtn"
-        onClick={() => props.bookfun(props.keyvalue)}
-        id="clickBtn"
-      >
-        Click me!!!
-      </button>
+
+      <span className="number"> {`# ${props.keyvalue}`}</span>
     </article>
   );
 };
