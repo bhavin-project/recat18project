@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## just clone the repository.
+
+git clone https://github.com/bhavin-project/recat18project.git
+
+In terminal run command:- npm i
+
 In the project directory, you can run:
 
 ### `npm start`
